@@ -10,6 +10,13 @@ extern int num_threads;
 extern int Kx[3][3];
 extern int Ky[3][3];
 
-// Thread function argument - TODO
+// Thread function argument
+typedef struct {
+    int startRow;
+    int endRow; 
+} sobelChunk;
 
-// Function declarations - TODO
+
+// Function declarations
+void sobelFilter(int, int);
+void *sobelRoutine(void *arg);
